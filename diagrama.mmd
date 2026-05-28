@@ -1,0 +1,36 @@
+classDiagram
+
+class Vehiculo {
+    placa : string
+    capacidadCarga : number
+
+    obtenerDatos() string
+}
+
+class Etiqueta {
+    codigoBarras : string
+    fragil : boolean
+
+    obtenerAdvertencia() string
+}
+
+class Paquete {
+    destinatario : string
+    direccion : string
+    etiqueta : Etiqueta
+
+    mostrarGuia() void
+}
+
+class Conductor {
+    nombre : string
+    entregasRealizadas : number
+    vehiculo : Vehiculo
+
+    mostrarDatos() void
+}
+
+Conductor --> Vehiculo : usa un vehículo
+Paquete --> Etiqueta : contiene una etiqueta
+```
+
